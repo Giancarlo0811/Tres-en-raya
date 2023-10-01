@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: #1A2B33;
+}
+
+.container {
+    max-width: 800px;
+    min-height: 100vh;
+    margin: 1rem auto 0 auto;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.header {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header h1 {
+    font-size: 5rem;
+    color: #34C3BE;
+}
+
+.header h1 span {
+    color: #F2B138;
+}
+
+.header .status {
+    background-color: #1E3640;
+    font-size: 2.5rem;
+    padding: 1.5rem 2rem;
+    border-radius: .5rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    color: #A9BEC8;
+    margin-left: 4rem;
+}
+
+.header #restart-btn {
+    color: #1A2B33;
+    font-size: 2.5rem;
+    padding: 1rem 1.5rem;
+    border-radius: 1rem;
+    border: none;
+    background: #A9BEC8;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.header #restart-btn:hover {
+    background-color: #1E3640;
+    color: #A9BEC8;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.cell {
+    height: 10rem;
+    width: 10rem;
+    background-color: #1E3640;
+    border: .2rem solid rgba(255, 255, 255, .2);;
+    border-radius: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 6rem;
+}
+
+.display-winner {
+    padding: 2rem;
+    width: 50%;
+    text-align: center;
+    font-size: 1.4rem;
+    border-radius: 2rem;
+    background-color: #1E3640;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: none;
+}
+
+footer {
+    padding: 2rem;
+    background-color: #1E3640;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer p {
+    color: #A9BEC8;
+    font-size: 2rem;
+}
+
+footer a {
+    font-size: 2.5rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a i {
+    transition: all 0.3s;
+}
+
+footer a i:hover {
+    transform: rotate(360deg);
+}
+
+
+@media(max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .header .status {
+        margin-left: 0;
+    }
+}
