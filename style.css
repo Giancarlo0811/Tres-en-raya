@@ -90,6 +90,11 @@ body {
     text-align: center;
     cursor: pointer;
     font-size: 6rem;
+    transition: transform .2s;
+}
+
+.cell:hover {
+    transform: scale(1.1);
 }
 
 .display-winner {
